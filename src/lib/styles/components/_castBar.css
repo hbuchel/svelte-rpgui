@@ -1,0 +1,38 @@
+.rpgui-cast-bar-container {
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+.rpgui-cast-bar-container--active {
+  opacity: 1;
+}
+.rpgui-cast-bar {
+  --duration: 1000ms;
+  width: var(--rpgui-cast-bar-width);
+  height: var(--rpgui-cast-bar-height);
+  border-radius: var(--rpgui-cast-bar-border-radius);
+  border: var(--rpgui-cast-bar-border);
+  background-color: var(--rpgui-cast-bar-background-color);
+  overflow: hidden;
+  position: relative;
+}
+.rpgui-cast-bar-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0);
+  background-image: var(--rpgui-cast-bar-indicator-background-image);
+}
+.rpgui-cast-bar-indicator--active {
+  animation: cast var(--duration) linear forwards;
+}
+
+@keyframes cast {
+  0% {
+    transform: translate(-100%,0);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}

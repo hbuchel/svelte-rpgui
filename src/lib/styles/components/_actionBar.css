@@ -1,0 +1,9 @@
+.rpgui-action-bar {
+  --columns: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), auto);
+  gap: var(--rpgui-action-bar-gap);
+  padding: var(--rpgui-action-bar-padding);
+  border: var(--rpgui-action-bar-border);
+  background-color: var(--rpgui-action-bar-background-color);
+}

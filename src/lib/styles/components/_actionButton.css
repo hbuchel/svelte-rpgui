@@ -1,0 +1,100 @@
+/* shared */
+.rpgui-action-button:before, 
+.rpgui-action-button:after,
+.rpgui-action-button-icon,
+.rpgui-action-button-inner,
+.rpgui-action-button-cooldown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rpgui-action-button {
+  background-color: var(--rpgui-action-button-background-color);
+  border: var(--rpgui-action-button-border);
+  border-radius: var(--rpgui-action-button-border-radius);
+  width: var(--rpgui-action-button-width);
+  height: var(--rpgui-action-button-height);
+  position: relative;
+  transition: .2s border-color ease-out;
+  &:before, &:after {
+    content: '';
+    opacity: 0;
+    z-index: 2;
+  }
+  &:before {
+    box-shadow: var(--rpgui-action-button-before-box-shadow);
+    transition: .2s opacity ease-out;
+  }
+  &:after {
+    box-shadow: var(--rpgui-action-button-after-box-shadow);
+    transition: .2s opacity ease-out;
+  }
+}
+
+.rpgui-action-button:focus-visible {
+  border-color: #fff;
+  outline: none;
+}
+
+.rpgui-action-button:hover {
+  border-color: var(--rpgui-action-button-hover-border-color);
+  &:before {
+    opacity: 1;
+  }
+}
+.rpgui-action-button:active {
+  border-color: var(--rpgui-action-button-hover-border-color);
+  &:before, &:after {
+    opacity: 1;
+  }
+}
+
+.rpgui-action-button-inner {
+  display: inline-grid;
+  justify-content: space-between;
+  align-content: space-between;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "top-left top-right"
+    "bottom-left bottom-right";
+  padding: var(--rpgui-action-button-inner-padding);
+}
+
+.rpgui-action-button-text {
+  --grid-area: top-left;
+  color: var(--rpgui-action-button-text-color);
+  font-weight: var(--rpgui-action-button-text-font-weight);
+  text-shadow: var(--rpgui-action-button-text-text-shadow);
+  grid-area: var(--grid-area);
+}
+
+.rpgui-action-button-cooldown {
+  --duration: 1000ms;
+  transform: rotate(-90deg);
+  & circle {
+    stroke: hsla(0,0%,0%,0);
+    fill: none;
+    stroke-width: 100px;
+    stroke-dasharray: 314;
+    
+  }
+}
+.rpgui-action-button-cooldown--active {
+  & circle {
+    stroke: hsla(0,0%,0%,.5);
+    animation: cooldown var(--duration) linear forwards;
+  }
+}
+
+@keyframes cooldown {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -314;
+  }  
+}

@@ -1,0 +1,29 @@
+html, body, body > div, main {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #211e1e;
+  line-height: var(--line-height-small);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  & > * {
+    flex: none;
+  }
+}
+
+@keyframes wipe {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -314;
+  }  
+} 

@@ -1,0 +1,45 @@
+:root {
+  --font-family: 'Noto Sans Display', sans-serif;
+
+  --line-height-small: 1.2;
+
+  /* ActionBar */
+  --rpgui-action-bar-border-width: 2px;
+  --rpgui-action-bar-border-style: solid;
+  --rpgui-action-bar-border-color: #777;
+  --rpgui-action-bar-border: var(--rpgui-action-bar-border-width) var(--rpgui-action-bar-border-style) var(--rpgui-action-bar-border-color);
+  --rpgui-action-bar-padding: 2px;
+  --rpgui-action-bar-gap: 2px;
+  
+  /* ActionButton */
+  --rpgui-action-button-border-width: 2px;
+  --rpgui-action-button-border-style: solid;
+  --rpgui-action-button-border-color: #777;
+  --rpgui-action-button-border: 
+    var(--rpgui-action-button-border-width) var(--rpgui-action-button-border-style) var(--rpgui-action-button-border-color);
+  --rpgui-action-button-border-radius: 3px;
+  --rpgui-action-button-width: 64px;
+  --rpgui-action-button-height: 64px;
+
+  --rpgui-action-button-hover-border-color: hsla(56, 70%, 70%, .72);
+
+  --rpgui-action-button-before-box-shadow: 0 0 8px 1px hsl(56, 70%, 70%) inset;
+  --rpgui-action-button-after-box-shadow: 0 0 8px 2px hsl(56, 70%, 70%) inset;
+  --rpgui-action-button-inner-padding: 0 3px;
+
+  /* ActionButtonText */
+  --rpgui-action-button-text-color: #fff;
+  --rpgui-action-button-text-font-weight: 700;
+  --rpgui-action-button-text-text-shadow: 1px 1px 0s hsla(0,0%,0%,.7);
+
+  /* CastBar */
+  --rpgui-cast-bar-width: 100%;
+  --rpgui-cast-bar-height: 20px;
+  --rpgui-cast-bar-border-radius: 3px;
+  --rpgui-cast-bar-border-width: 2px;
+  --rpgui-cast-bar-border-style: solid;
+  --rpgui-cast-bar-border-color: #ccc;
+  --rpgui-cast-bar-border: var(--rpgui-cast-bar-border-width) var(--rpgui-cast-bar-border-style) var(--rpgui-cast-bar-border-color);
+
+  --rpgui-cast-bar-indicator-background-image: linear-gradient(#f3eb54, #d1a34e);
+}
